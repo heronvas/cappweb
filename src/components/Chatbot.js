@@ -23,16 +23,48 @@ const Chatbot = ({visible,close}) => {
     // Scroll to the top when the App component mounts
     
 
-    // Set show state to true after 5 seconds
     const timeoutId = setTimeout(() => {
+      const handleSendMessage1 = async () => {
+      
+  
+  
+      
+        setInput('');
+       
+    
+        try {
+          const response = await axios.post(
+            'https://cardekh.azurewebsites.net/website',
+            {
+              phone_no: 9999999999,
+              message: "1",
+            }
+          );
+          const newBotMessage = {
+            text: response.data,
+            type: 'bot',
+            
+          };
+           
+          setMessages((prevMessages) => [...prevMessages, newBotMessage]);
+    
+        
+        } catch (error) {
+          
+        } finally {
+        
+        }
+      };
+
+
       const generateRandomNumber = () => {
         const randomNumber = Math.floor(1000000000 + Math.random() * 9000000000);
         return randomNumber;
       };
-      setrandom(generateRandomNumber);
+      setrandom(generateRandomNumber());
+      handleSendMessage1();
     
     }, 1000);
-
     // Clear the timeout when the component unmounts to avoid memory leaks
     return () => clearTimeout(timeoutId);
   }, []);
@@ -43,40 +75,7 @@ const Chatbot = ({visible,close}) => {
   const handleInputChange = (e) => {
     setInput(e.target.value);
   };
-  // const handlecompare = async () => {
-    
 
-  //   const newUserMessage = {
-  //     text: "Would you provide a comparison between ChatGPT and Zulki? ",
-  //     type: 'user',
-  //   };
-
-  //   setMessages((prevMessages) => [...prevMessages, newUserMessage]);
-  //   setInput('');
-  //   setLoading(true);
-
-  //   try {
-  //     const response = await axios.post(
-  //       'https://cardekh.azurewebsites.net/website',
-  //       {
-  //         phone_no: random10DigitNumber,
-  //         message: "Would you provide a comparison between ChatGPT and Zulki? in 4 points ",
-  //       }
-  //     );
-
-  //     const newBotMessage = {
-  //       text: response.data,
-  //       type: 'bot',
-  //       loading: false, // Set loading to false for the latest bot message
-  //     };
-
-  //     setMessages((prevMessages) => [...prevMessages, newBotMessage]);
-  //   } catch (error) {
-      
-  //   } finally {
-  //     setLoading(false);
-  //   }
-  // };
   const handleSendMessage = async () => {
     if (input.trim() === '') return;
     console.log(random10DigitNumber);
@@ -197,7 +196,7 @@ const Chatbot = ({visible,close}) => {
         <div className='intro'>Welcome</div>
         <div className='wel'>How may I assist you today?</div>
       </div>
-      <div className='messages'>
+      {/* <div className='messages'>
         <div className='messagebot'>
           <div className='imagebot'>
           <MySVG  className='icon2 text-blue-800' width="38px" height="38px"/>
@@ -206,7 +205,7 @@ const Chatbot = ({visible,close}) => {
           👋 Hello! How can I help you today? If you have any questions or need assistance, feel free to ask.
           </div>
         </div>
-      </div>
+      </div> */}
       <div className='faq'>
       <div className="messages">
             <div className="messagebot">
