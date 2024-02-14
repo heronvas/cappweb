@@ -1,0 +1,386 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Francois+One:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+
+body {
+  margin: 0;
+  line-height: normal;
+  font-family: var(--font-francois-one);
+  position: relative;;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+:root {
+  /* fonts */
+  --font-francois-one: "Francois One";
+  --regular-14: Roboto;
+  --font-inter: Inter;
+}
+.headsss{
+  position: fixed;
+  top: 0%;
+}
+
+
+/* Add this rule to make the scrollbar invisible */
+::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent; /* Make it transparent */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Make the handle (thumb) transparent */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;700&display=swap');
+html, body, #root {
+    /* height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(23, 23, 23); */
+    position: relative;
+    
+    background-color: white;
+  }
+.messageuser{    
+    display: flex ;
+    flex-direction: row-reverse;
+}
+.messagebot{
+    display: flex ;
+    flex-direction: row;
+}
+.bot{
+    background-color: rgb(212, 217, 212);
+    display: inline-block;
+    margin: 5px;
+    border: 0px solid red;
+    border-radius: 30px;
+    padding: 10px;
+    min-width: 5%;
+    color: rgb(11, 11, 11);
+    max-width: 80%;
+    word-wrap: break-word;
+    font-family: Google Sans;
+}
+
+
+/* Add this to your CSS file */
+
+.loading-spinner {
+  border: 4px solid rgb(105, 217, 150);
+  border-top: 4px solid rgb(75, 225, 135);
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  animation: spin 1s linear infinite;
+  margin-top: 15px;
+  margin-left: 10px;
+  z-index: 400;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+
+.chatbot{
+        background-color: #ffffff;
+        /* background: transparent; */
+        /* backdrop-filter: blur(10px); */
+        overflow: auto;
+        box-shadow: 7px 7px 5px #888888, -5px -5px 10px #555555;
+        height: 80%;
+        overflow-y: auto;
+        z-index: 99;
+        position: fixed;
+        bottom: 18px;
+        width: 28%;
+        right: 20px;    
+        margin-left: 20%;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        transition: all .5s;
+        animation:  moveEnlargeAndAppear .5s ease-in-out forwards;
+}
+
+  
+  
+.user{
+    background-color: #2d2e2f;
+    color: white;
+    display: inline-block;
+    border: 0px solid red;
+    border-radius: 30px;
+    padding: 10px;
+    margin: 5px;
+    min-width: 3%;
+    max-width: 80%;
+    word-wrap: break-word;
+    font-family: Google Sans;
+}
+.chatbot-input{
+    /* background-color:  rgb(0, 0, 0) ; */
+    position: sticky;
+    bottom: 0px;
+    display: flex;
+    background-color: #ffffff;
+   /* margin-top: 40px; */
+   padding-bottom: 20px;
+    /* height: 13%; */
+    /* bottom: 10px */
+    
+}
+.icon3{
+  font-size: 100px;
+  
+}
+.inputm{
+    border: rgb(1, 1, 1) solid 2px;
+   color: rgb(20, 20, 20);
+    border-radius: 30px;
+    height: 40px;
+    background: transparent;
+    width: 90%;
+    padding: 10px;
+    border: 2px solid rgb(39, 105, 65);;
+}
+::-webkit-scrollbar{
+    width: .5em;
+}
+::-webkit-scrollbar-track{
+    background: rgb(0, 0, 0) ;
+    border-radius: 0px 30px 30px 0px;
+}
+::-webkit-scrollbar-thumb{
+    background-color:rgb(64, 63, 63) ;
+    border-radius: 30px ;
+}
+.introduction{
+    height: 17rem;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    justify-content: center;
+}
+.intro{
+    font-weight: bolder;
+    font-family: Google Sans;
+    color: rgb(20 83 45);
+    font-size: 44px;
+}
+.wel{
+    color: #070707a3;
+
+}
+.button1{
+    /* background-color: rgb(0, 0, 0); */
+    border: none;
+    width: 6%;
+    padding-top: 0px;
+    padding-left: 20px;
+}
+.dp{
+    object-fit: cover;
+    padding-top: 12.5px;
+}
+.mdiv{
+    height: 2%;
+}
+.send{
+    color: black;
+    font-size: 25px;
+}
+.con1{
+    /* margin-top: 2.5%; */
+    /* margin-left: 5%; */
+    height: 90%;
+    width: 90%;
+    position: absolute;
+}
+
+.chatbot.active1{
+    /* margin-left: 10%; */
+    width: 80%;
+}
+
+
+
+.icon2{
+    color: white;
+    font-size: 35px;
+    padding-top: 10px;
+}
+
+@media (max-width: 480px) {
+    .body{
+        width: 100%;          
+        overflow: hidden;
+    }
+    .bttt{
+      bottom: 10px;
+      right: 10px
+    }
+    .icon3{
+      width: 40px;
+      height: 40px;
+
+    }
+    .chatbot {
+      width: 100vw;
+     margin: 0;
+     border-radius: 0;
+     height: 100%;
+     left: 0.0rem;
+     bottom: -1rem;
+     overflow-y: auto;
+     height: 93%;
+    }
+    .button1{
+      padding-left: 8px;
+    }
+    .introduction{
+      height: 55%;
+    }
+    .closer{
+      width: 100%;
+      border-radius: 0px;
+    }
+    
+    .chatbot.active1{
+        width: 100%;
+       margin: 0;
+       border-radius: 0;
+       height: 93%;
+      }
+    
+    .con1{
+        width: 94%;
+        margin: 0;
+    }
+  }
+  /* Add this rule to make the scrollbar invisible */
+::-webkit-scrollbar {
+  width: 0em;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent; /* Make it transparent */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Make the handle (thumb) transparent */
+}
+
+.loader{
+  background-color:rgb(39, 105, 65);
+    display: inline-block;
+    margin: 5px;
+    border: 0px solid red;
+    border-radius: 500px;
+    padding: 10px;
+    min-width: 5%;
+    max-width: 62%;
+    word-wrap: break-word;
+}
+
+  .active{
+    position: absolute;
+    transition: all 0s;
+   
+    opacity: 1;
+    scale: 0;
+    
+   
+  }
+  input:focus {
+    outline: none; /* or outline: 0; */
+  }
+  
+
+@keyframes moveEnlargeAndAppear {
+  0% {
+    transform: translateY(1px) scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+} 
+.closer{
+  width: 100%;
+  position: fixed;
+}
+.heads{
+  position: sticky;
+  background-color: #002b51;
+  top: 0px;
+ 
+}
+.q1{
+  background-color: transparent;
+  color: #020202;
+  border: 2px solid rgb(39, 105, 65);
+}
+.q1:hover{
+  background-color: #48764e;
+  border: 2px solid rgb(11, 50, 27);
+}
+.footer{
+  background-color: #1E1F20;
+}
+
+
+.faq{
+  margin-left: 38px;
+}
+.inputm::placeholder{
+  color: #020202;
+}
+.dot-typing {
+  font-size: 24px;
+  color: #333;
+  white-space: nowrap; /* Prevent line breaks */
+  overflow: hidden; /* Hide overflow text */
+  border-right: 0.15em solid #333; /* Border for the "cursor" effect */
+  animation: typing 1s steps(4, end) infinite; /* Adjust duration and steps as needed */
+}
+
+@keyframes typing {
+  from, to {
+    width: 0; /* Start with no width */
+  }
+  25%, 75% {
+    width: 1.5em; /* Expand width for the "cursor" effect */
+  }
+  50% {
+    width: 0; /* Shrink width for the "cursor" effect */
+  }
+}
+.Demobutton{
+  z-index: 70000;
+}
+.bt1{
+  scale:0;
+  opacity: 0;
+}
+
+.navblur{
+  background: transparent;
+  backdrop-filter: blur(10px);
+  position: fixed;
+  z-index: 90909;
+}
