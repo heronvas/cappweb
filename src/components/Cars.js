@@ -23,7 +23,7 @@ export default function Cars() {
     {
       name: "Maruti Baleno Alpha AGS",
       img: myImage2,
-      price: "Rs 9.88 Lakh",
+      price: "Rs  8.75 Lakh",
       links: "/baleno2",
     },
     {
